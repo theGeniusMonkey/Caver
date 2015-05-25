@@ -17,6 +17,9 @@ def cave_entrance(wow):
 	elif wow == "i" or wow == "inventory":
 		new_wow = input("You have nothing in your inventory. ").lower()
 		cave_entrance(new_wow)
+	elif wow == "l" or wow == "look":
+		new_wow = input("You look at your surroundings and see an open field. Directly in front of you is the concrete square, with \'DO NOT TOUCH\' written on it. ").lower()
+		cave_entrance(new_wow)
 	else:
 		new_wow = input("I don\'t understand. ").lower()
 		cave_entrance(new_wow)
@@ -34,6 +37,9 @@ def welcome(w):
 		welcome(new_inp)
 	elif w == "i" or w == "inventory":
 		new_inp = input("You have nothing in your inventory. ").lower()
+		welcome(new_inp)
+	elif w == "l" or w == "look":
+		new_inp = input("You look around for something useful. All you see is the open field and the concrete square to the north. ").lower()
 		welcome(new_inp)
 	else:
 		new_inp = input("I don\'t understand. ").lower()
