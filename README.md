@@ -13,3 +13,8 @@ ALPHA V1.1
 ALPHA V1.2
 - Inputs are no longer processed on the same line
 - You can now "examine" or "inspect" the stone
+
+ALPHA V1.3
+- You can go east from the Cave Entrance
+- You can go north from the Cave Entrance
+- Lines are printed on separate lines (no wrap)
