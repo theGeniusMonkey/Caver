@@ -1,5 +1,3 @@
-from time import *
-
 inventory = []
 gold_amount = {"Gold": 50}
 
