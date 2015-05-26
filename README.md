@@ -18,3 +18,7 @@ ALPHA V1.3
 - You can go east from the Cave Entrance
 - You can go north from the Cave Entrance
 - Lines are printed on separate lines (no wrap)
+
+ALPHA V1.4
+- Added "help" or "?". This will bring up a small list of commands.
+- Added more code to the Cave Entrance.
