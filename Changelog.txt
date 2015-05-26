@@ -23,3 +23,9 @@ WIP V1.4
 
 WIP V1.5
 - Added ">" before every user input.
+
+WIP V1.6
+- Added ASCII Art
+
+WIP V1.7
+- Changed ASCII Art
