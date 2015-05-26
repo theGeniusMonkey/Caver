@@ -1,12 +1,20 @@
 #Creates a list that is the players inventory. Starts empty.
 inventory = []
+
 #Creates a dict that is the players gold storage. Starts with none.
 gold_amount = {"Gold": 0}
 
 #Very first thing the player reads.
 print("Welcome to Caver!")
 print("You wake up on a field, with nothing but a square made of concrete to the north.")
+print("(Use \'help\' to see commands)")
 inp = input("").lower()
+
+def weapons(a):
+	if a == "go to" or a == "go":
+		print("Where do you want to go?")
+		arm = input("").lower()
+		weapons(arm)
 
 def explore_one(d):
 	if d == "go east" or d == "east" or d == "e":
@@ -26,6 +34,31 @@ def explore_one(d):
 		print("Each table has a few weapons on them, and different amounts of gold.")
 		weap = input("").lower()
 		weapons(weap)
+	elif d == "go west" or d == "w" or d == "west" or d == "south" or d == "go south" or d == "s":
+		print("There is a wall there.")
+		dor = input("").lower()
+		explore_one(dor)
+	elif d == "l" or d == "look":
+		print("You see a corridor heading of to the east.")
+		print("There is a door slightly ajar to the north.")
+		dor = input("").lower()
+		explore_one(dor)
+	elif d == "g" or d == "gold":
+		print(gold_amount)
+		dor = input("").lower()
+		explore_one(dor)
+	elif d == "inspect" or d == "examine":
+		print("What would you like to inspect?")
+		dor = input("").lower()
+		explore_one(dor)
+	elif d == "i" or d == "inventory":
+		print("You have nothing in your inventory.")
+		dor = input("").lower()
+		explore_one(dor)
+	else:
+		print("I don\'t understand.")
+		dor = input("").lower()
+		explore_one(dor)
 
 def cave_entrance(wow):
 	if wow == "touch stone" or wow == "touch" or wow == "touch it":
@@ -84,6 +117,19 @@ def welcome(w):
 		welcome(new_inp)
 	elif w == "inspect" or w == "examine":
 		print("There is nothing here to look at.")
+		new_inp = input("").lower()
+		welcome(new_inp)
+	elif w == "help" or w == "h" or w == "?":
+		print("===COMMANDS===")
+		print("\'l\'- Look at your surroundings.")
+		print("\'i\'- Check your inventory.")
+		print("\'g\'- Check how much gold you have.")
+		print("\'n\', \'e\', \'s\', and \'w\'- North, East, South, and West, respectively.")
+		print("\'examine\' or \'inspect\'- Look closely at something.")
+		print("\'take\'- Takes a specified object.")
+		print("\'open\'- Opens a specified object.")
+		print("There are also commands not listed here, such as \'go to\' or \'touch\'...")
+		print("You'll have to intuit those on your own.")
 		new_inp = input("").lower()
 		welcome(new_inp)
 	else:
