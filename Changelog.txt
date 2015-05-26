@@ -20,3 +20,6 @@ WIP V1.3
 WIP V1.4
 - Added "help" or "?". This will bring up a small list of commands.
 - Added more code to the Cave Entrance.
+
+WIP V1.5
+- Added ">" before every user input.
