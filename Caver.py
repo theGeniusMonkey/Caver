@@ -5,7 +5,13 @@ inventory = []
 gold_amount = {"Gold": 0}
 
 #Very first thing the player reads.
-print("Welcome to Caver!")
+print("Welcome to...\n")
+print("   _|_|_|    _|_|    _|      _|  _|_|_|_|  _|_|_|  ")
+print(" _|        _|    _|  _|      _|  _|        _|    _|")
+print(" _|        _|_|_|_|  _|      _|  _|_|_|    _|_|_|  ")
+print(" _|        _|    _|    _|  _|    _|        _|    _|")
+print("   _|_|_|  _|    _|      _|      _|_|_|_|  _|    _|")
+print("\n\n")
 print("You wake up on a field with nothing but a square made of concrete to the north.")
 print("(Use \'help\' to see commands)")
 user = input(">").lower()
@@ -68,9 +74,9 @@ def weapons(user):
 				item == input(">").lower()
 		elif user == "table 4":
 			print("You walk up to table 4. You see:")
-			print("")
-			print("")
-			print("")
+			print("a Tin Foil Helmet")
+			print("a Fire Scythe")
+			print("6 gold coins")
 			take = input(">").lower()
 			if take == "take":
 				print("What item do you want to take?")
