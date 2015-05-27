@@ -1,3 +1,5 @@
+from time import *
+
 #Creates a list that is the players inventory. Starts empty.
 inventory = []
 
@@ -6,18 +8,30 @@ gold_amount = {"Gold": 0}
 
 #Very first thing the player reads.
 print("Welcome to...\n")
+sleep(1)
 print(" @@@@@@@   @@@@@@   @@@  @@@  @@@@@@@@  @@@@@@@ ")
+sleep(1)
 print("@@@@@@@@  @@@@@@@@  @@@  @@@  @@@@@@@@  @@@@@@@@")
+sleep(1)
 print("!@@       @@!  @@@  @@!  @@@  @@!       @@!  @@@")
+sleep(1)
 print("!@!       !@!  @!@  !@!  @!@  !@!       !@!  @!@")
+sleep(1)
 print("!@!       @!@!@!@!  @!@  !@!  @!!!:!    @!@!!@! ")
+sleep(1)
 print("!!!       !!!@!!!!  !@!  !!!  !!!!!:    !!@!@!  ")
+sleep(1)
 print(":!!       !!:  !!!  :!:  !!:  !!:       !!: :!! ")
+sleep(1)
 print(":!:       :!:  !:!   ::!!:!   :!:       :!:  !:!")
+sleep(1)
 print("'::: :::  ::   :::    ::::     :: ::::  ::   :::")
+sleep(1)
 print(" :: :: :   :   : :     :      : :: ::   ':   : :")
+sleep(1)
 print("\n\n")
 print("You wake up on a field with nothing but a square made of concrete to the north.")
+sleep(.5)
 print("(Use \'help\' to see commands)")
 user = input(">").lower()
 
@@ -94,6 +108,42 @@ def weapons(user):
 				print("I don\'t understand.")
 				user = input(">").lower()
 				weapons(user)
+	elif user == "go to table 1":
+		print("You walk up to table 1. You see:")
+		print("a Steel Chestpiece")
+		print("a Shiny Warhammer")
+		print("1 Gold Coin")
+		take = input(">").lower()
+		if take == "take":
+			print("What item do you want to take?")
+			item == input(">").lower()
+	elif user == "got to table 2":
+		print("You walk up to table 2. You see:")
+		print("a Valkyrie Helmet")
+		print("an Ulfberht sword")
+		print("23 Gold Coins")
+		take = input(">").lower()
+		if take == "take":
+			print("What item do you want to take?")
+			item == input(">").lower()
+	elif user == "go to table 3":
+		print("You walk up to table 3. You see:")
+		print("2 Fire-Resistant Gauntlets")
+		print("a Battleaxe")
+		print("10 gold coins")
+		take = input(">").lower()
+		if take == "take":
+			print("What item do you want to take?")
+			item == input(">").lower()
+	elif user == "go to table 4":
+		print("You walk up to table 4. You see:")
+		print("a Tin Foil Helmet")
+		print("a Fire Scythe")
+		print("6 gold coins")
+		take = input(">").lower()
+		if take == "take":
+			print("What item do you want to take?")
+			item == input(">").lower()
 	else:
 		if generic(user) == True:
 			user = input(">").lower()
