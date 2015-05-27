@@ -32,3 +32,6 @@ WIP V1.7
 
 WIP V1.8
 - Added a delay on the welcome page.
+
+WIP V1.9
+- Changed the delay
