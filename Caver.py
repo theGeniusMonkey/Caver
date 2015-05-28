@@ -71,13 +71,24 @@ def weapons(user):
 				print(item)
 			print(str(items["gold_coins"]) + " gold coins")
 			take = input(">").lower()
-			if take == "take":
+			while take == "take":
 				print("What item do you want to take?")
 				item = input(">").lower()
 				if item in items["inventory_items"]:  # Check if the item the user entered is in the provided list
 					inventory.append(item)
+					break
 				elif item == "gold" or item == "coins" or item == "gold coins":
 					gold_amount["Gold"] += items["gold_coins"]
+					break
+				elif item == "chestpiece":
+					inventory.append("steel chestpiece")
+					break
+				elif item == "warhammer":
+					inventory.append("shiny warhammer")
+					break
+				else:
+					print("I don\'t understand.")
+					take = input(">").lower()
 			else:
 				if generic(take) == True:
 					take = input(">").lower()
