@@ -65,41 +65,61 @@ def weapons(user):
 		print("Where do you want to go?")
 		user = input(">").lower()
 		if user == "table 1":
+			items = { "inventory_items": ["steel chestpiece", "shiny warhammer"], "gold_coins": 2 }
 			print("You walk up to table 1. You see:")
-			print("a Steel Chestpiece")
-			print("a Shiny Warhammer")
-			print("1 Gold Coin")
+			for item in items["inventory_items"]:
+				print(item)
+			print(str(items["gold_coins"]) + " gold coins")
 			take = input(">").lower()
 			if take == "take":
 				print("What item do you want to take?")
-				item == input(">").lower()
+				item = input(">").lower()
+				if item in items["inventory_items"]:  # Check if the item the user entered is in the provided list
+					inventory.append(item)
+				elif item == "gold" or item == "coins" or item == "gold coins":
+					gold_amount["Gold"] += items["gold_coins"]
 		elif user == "table 2":
 			print("You walk up to table 2. You see:")
-			print("a Valkyrie Helmet")
-			print("an Ulfberht sword")
-			print("23 Gold Coins")
+			items = { "inventory_items": ["valkyrie helmet", "ulfbehrt sword"], "gold_coins": 23}
+			for item in items["inventory_items"]:
+				print(item)
+			print(str(items["gold_coins"]) + " gold coins")
 			take = input(">").lower()
 			if take == "take":
 				print("What item do you want to take?")
-				item == input(">").lower()
+				item = input(">").lower()
+				if item in items["inventory_items"]:  # Check if the item the user entered is in the provided list
+					inventory.append(item)
+				elif item == "gold" or item == "coins" or item == "gold coins":
+					gold_amount["Gold"] += items["gold_coins"]
 		elif user == "table 3":
 			print("You walk up to table 3. You see:")
-			print("2 Fire-Resistant Gauntlets")
-			print("a Battleaxe")
-			print("10 gold coins")
+			items = { "inventory_items": ["2 fire-resistant gauntlets", "battleaxe"], "gold_coins": 10}
+			for item in items["inventory_items"]:
+				print(item)
+			print(str(items["gold_coins"]) + " gold coins")
 			take = input(">").lower()
 			if take == "take":
 				print("What item do you want to take?")
-				item == input(">").lower()
+				item = input(">").lower()
+				if item in items["inventory_items"]:  # Check if the item the user entered is in the provided list
+					inventory.append(item)
+				elif item == "gold" or item == "coins" or item == "gold coins":
+					gold_amount["Gold"] += items["gold_coins"]
 		elif user == "table 4":
 			print("You walk up to table 4. You see:")
-			print("a Tin Foil Helmet")
-			print("a Fire Scythe")
-			print("6 gold coins")
+			items = { "inventory_items": ["tin foil helmet", "fire scythe"], "gold_coins": 6}
+			for item in items["inventory_items"]:
+				print(item)
+			print(str(items["gold_coins"]) + " gold coins")
 			take = input(">").lower()
 			if take == "take":
 				print("What item do you want to take?")
-				item == input(">").lower()
+				item = input(">").lower()
+				if item in items["inventory_items"]:  # Check if the item the user entered is in the provided list
+					inventory.append(item)
+				elif item == "gold" or item == "coins" or item == "gold coins":
+					gold_amount["Gold"] += items["gold_coins"]
 		else:
 			if generic(user) == True:
 				user = input(">").lower()
